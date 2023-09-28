@@ -1,4 +1,6 @@
 const { Person } = require("./person")
+// require("./modules/path")
+// require ("./modules/fs")
+require ("./modules/http")
 
 const pessoa = new Person("Mateus")
-console.log(pessoa.sayMyName())
