@@ -1,0 +1,22 @@
+{
+  "name": "nootropic",
+  "version": "1.0.0",
+  "description": "Repositório remoto do projeto Nootropic, para as disciplinas PIU e PDSI.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusnoites/Nootropic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusnoites/Nootropic/issues"
+  },
+  "homepage": "https://github.com/mateusnoites/Nootropic#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
