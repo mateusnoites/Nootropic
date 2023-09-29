@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem de usuários</title>
+</head>
+<body>
+  <h1>Usuários</h1>
+
+  <div class="container">
+    <div class="content">
+      <% if (users.length > 0) { %> <% users.forEach(user => { %>
+      <h3 class="title">
+        <%= user.firstName %> <%= user.lastName %>
+      </h3>
+      <p><%= user.email %></p>
+      <hr>
+      <% }) %> <% } else { %>
+      <p>Não há usuários registrados.</p>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
