@@ -21,10 +21,10 @@ A forma de monetização do Nootropic será por meio da disponibilização da po
 
 ## Rodízio de líderes 📢
 
-1. **Júlia Fernanda 👑**
+1. Júlia Fernanda
 2. José Jefferson
 3. Sabrina Vitória
-4. Mateus Dias
+4. **Mateus Dias 👑**
 
 * **👑 Líder atual**
 
