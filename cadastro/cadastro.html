@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./icon.png" type="image/png">
+  <link rel="stylesheet" href="./cadastro.css">
+  <title>Cadastro</title>
+</head>
+<body>
+  <main>
+    <div class="cadernos">
+    </div>
+
+    <div class="cadastro">
+
+      <div class="cabecalho">
+        <h1>Cadastre-se</h1>
+        <a href="../home/home.html"><img src="./noo.png" alt="Logo Nootropic"></a>
+      </div>
+
+      <form>
+        <div class="nomes">
+          <label for="nome">Primeiro nome <br>
+            <input type="text" placeholder="João" id="nome" label="Primeiro nome">
+          </label>
+
+          <label for="sobrenome">Sobrenome <br>
+            <input type="text" placeholder="Silva" id="sobrenome">
+          </label>
+        </div>
+
+        <p>
+          <label for="email">E-mail</label> <br>
+          <input type="email" id="email" placeholder="exemplo@email.com">
+        </p>
+
+        <p>
+          <label for="telefone">Telefone</label> <br>
+          <input type="tel" id="telefone" placeholder="+55 (99) 9999-9999">
+        </p>
+
+        <p>
+          <label for="senha">Senha</label> <br>
+          <input type="password" id="senha" placeholder="********"> <br>
+          <p class="senhaDetalhes">Crie uma senha forte com 8 a 16 caracteres.</p>
+        </p>
+
+        <p class="concordar">
+          <input type="checkbox" id="concordo">
+          <label for="concordo">Concordo com o envio dos meus dados.</label>
+        </p>
+        
+        <button type="submit">Enviar</button>
+      </form>
+
+      <hr>
+
+      <p class="encaminhaLogin">Já tem uma conta? <a href="../login/login.html">Faça login</a>.</p>
+
+    </div>
+  </main>
+</body>
+</html>
