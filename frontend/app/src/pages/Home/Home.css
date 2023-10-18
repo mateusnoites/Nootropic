@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.homePage::-webkit-scrollbar {
+  width: 5px;
+}
+
+.homePage::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.homePage::-webkit-scrollbar-thumb {
+  background-color: #FDB515;
+  border-radius: 500px;
+}
+
+.homePage header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.homePage header img {
+  width: 12%;
+  height: 100%;
+}
+
+.homePage main {
+  display: flex;
+}
+
+.homePage .imagemRelogio {
+  width: 50%;
+}
+
+.homePage .informs {
+  width: 50%;
+  padding: 5%;
+}
+
+.homePage .textos {
+  margin-right: 100px;
+}
+
+.homePage .imagemRelogio img {
+  margin-left: 20%;
+  width: 75%;
+}
+
+.homePage .quemSomos {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #FDB515;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.homePage .titulo {
+  position: relative;
+  top: -40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -6px;
+  font-size: 50px;
+}
+
+.homePage .subtexto {
+  position: relative;
+  top: -70px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.homePage .texto {
+  position: relative;
+  top: -70px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.homePage .confirm {
+  position: relative;
+  top: -20px;
+  background-color: #FDB515;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border: 0;
+  padding: 15px;
+  width: 150px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s background-color ease-in-out;
+}
+
+.homePage .confirm:hover {
+  background-color: #daa42e;
+}

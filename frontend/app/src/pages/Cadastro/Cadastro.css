@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700&display=swap');
+
+.cadastroPage {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.cadastroPage h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+}
+
+.cadastroPage main {
+  display: flex;
+}
+
+.cadastroPage .cadernos, .cadastro {
+  height: 100vh;
+}
+
+.cadastroPage .cadernos {
+  width: 50vw;
+  background-image: url(./cadernos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cadastroPage .cadastro {
+  width: 50vw;
+  height: 100vh;
+  margin: 0 70px;
+}
+
+.cadastroPage label {
+  color: #21272A;
+}
+
+.cadastroPage input {
+  margin-top: 5px;
+  background-color: #F2F4F8;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #C1C7CD;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.cadastroPage input[type="checkbox"] {
+  width: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.cadastroPage button {
+  margin: 40px 0;
+  width: 100%;
+  background-color: #FDB515;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s background-color ease-in-out;
+}
+
+.cadastroPage button:hover {
+  background-color: #daa42e;
+}
+
+.cadastroPage a {
+  color: #FDB515;
+  text-decoration: none;
+  transition: 0.3s color ease-in-out;
+}
+
+.cadastroPage a:hover {
+  color: #daa42e;
+}
+
+.cadastroPage .cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cadastroPage .cabecalho img {
+  height: 50px;
+}
+
+.cadastroPage .nomes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cadastroPage .nomes label {
+  width: 100%;
+}
+
+.cadastroPage .senhaDetalhes {
+  color: #21272A;
+  position: relative;
+  top: -10px;
+  font-size: 13px;
+}
+
+.cadastroPage .concordar {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.cadastroPage .concordar label {
+  margin-left: 10px;
+}
+
+.cadastroPage hr {
+  border: 1px solid #C1C7CD;
+}
+
+.cadastroPage .encaminhaLogin {
+  margin-top: 40px;
+}
