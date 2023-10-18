@@ -20,6 +20,7 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "create-vite": "^4.4.1",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
