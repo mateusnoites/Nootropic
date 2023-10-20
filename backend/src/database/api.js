@@ -1,4 +1,4 @@
-const { getDatabase, ref, set, push } = require("firebase/database");
+const { getDatabase, ref, set, query, orderByChild, equalTo, get } = require("firebase/database");
 const database = require('./firebaseConfig');
 
 const db = getDatabase(database);
@@ -15,4 +15,31 @@ const adicionar = async (collection, dados) => {
   }
 };
 
-module.exports = { adicionar };
+const buscar = async (collection, campo, valor) => {
+  const dataRef = ref(db, collection);
+
+  try {
+    const snapshot = await get(dataRef);
+    const resultados = [];
+
+    snapshot.forEach((childSnapshot) => {
+      const childData = childSnapshot.val();
+
+      // Verifica se o campo no documento é igual ao valor fornecido
+      if (childData[campo] === valor) {
+        resultados.push(childData);
+      }
+    });
+
+    if (resultados.length > 0) {
+      return resultados;
+    } else {
+      return "Nenhum dado correspondente encontrado.";
+    }
+  } catch (error) {
+    console.error("Erro ao buscar os dados:", error);
+  }
+}
+
+
+module.exports = { adicionar, buscar };

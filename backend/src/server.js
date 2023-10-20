@@ -15,8 +15,27 @@ app.listen(PORT, () => {
 });
 
 // Restante do seu código
-app.post("/cadastro", (req, res) => {
+app.post("/cadastro", async (req, res) => {
   let dados = req.body.usuario;
 
-  api.adicionar("usuarios", dados)
+  await api.adicionar("usuarios", dados)
+});
+
+app.post("/login", async (req, res) => {
+  try {
+    let dados = req.body.usuario;
+
+    const user = await api.buscar("usuarios", "email", dados.email);
+    
+    if(user[0].senha == dados.senha) {
+      console.log("Senha correta.");
+    } else {
+      console.log("Senha incorreta.")
+      console.log(`Senha informada: ${dados.senha}; Senha esperada: ${user.senha}`)
+    }
+
+    res.status(200).json({ user })
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao buscar usuário" });
+  }
 });
