@@ -116,3 +116,7 @@
 .loginPage .encaminhaCadastro {
   margin-bottom: 200px;
 }
+
+.loginPage .error-message {
+  color: red;
+}

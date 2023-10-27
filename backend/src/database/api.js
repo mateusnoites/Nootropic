@@ -1,4 +1,4 @@
-const { getDatabase, ref, set, query, orderByChild, equalTo, get } = require("firebase/database");
+const { getDatabase, ref, set, query, orderByChild, equalTo, get, push } = require("firebase/database");
 const database = require('./firebaseConfig');
 
 const db = getDatabase(database);

@@ -10,23 +10,26 @@ function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const navigate = useNavigate();
+  const [loginError, setLoginError] = useState(null);
 
-  function enviarDados() {
+  function enviarDados(evt) {
+    evt.preventDefault();
     const usuario = {
       email: email,
       senha: senha
     }
-
-    axios.post('http://localhost:5000/login', { usuario })
-    .then(response => {
-      console.log("Resposta do servidor:", response.data); // Verifique o que o servidor retorna
-      navigate('/dashboard');
-    })
-    .catch(error => {
-      console.error("Erro ao enviar dados:", error);
-      alert("Ocorreu um erro ao tentar cadastrar você.");
-    });
   
+    axios.post('http://localhost:8080/login', usuario)
+      .then(response => {
+        if (response.data.success) {
+          navigate('/dashboard/' + usuario.email);
+        } else {
+          setLoginError("Credenciais inválidas. Tente novamente.");  
+        }
+      })
+      .catch(error => {
+        setLoginError("Credenciais inválidas. Tente novamente.");
+      });
   }
   
   return (
@@ -60,6 +63,8 @@ function Login() {
             
             <button type="submit" onClick={enviarDados}>Enviar</button>
           </form>
+
+          {loginError && <p className="error-message">{loginError}</p>}
 
           <hr />
 

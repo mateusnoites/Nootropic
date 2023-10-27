@@ -16,7 +16,7 @@ function Cadastro() {
   function enviarDados() {
     const usuario = new Usuario(nome, sobrenome, email, tel, senha);
   
-    axios.post('http://localhost:5000/cadastro', { usuario })
+    axios.post('http://localhost:8080/cadastro', { usuario })
       .then(response => {
         alert("Cadastro confirmado!");
       })
