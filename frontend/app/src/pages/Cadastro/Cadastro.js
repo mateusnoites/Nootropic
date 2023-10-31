@@ -3,6 +3,7 @@ import { useState } from 'react';
 import nooImg from '../../images/noo.png'
 import Usuario from '../../models/Usuario';
 import './Cadastro.css'
+import { useNavigate } from 'react-router-dom';
 
 function Cadastro() {
   document.title = 'Cadastro';
@@ -12,21 +13,34 @@ function Cadastro() {
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
   const [senha, setSenha] = useState('');
+  const navigate = useNavigate();
 
-  function enviarDados() {
-    const usuario = new Usuario(nome, sobrenome, email, tel, senha);
-  
-    axios.post('http://localhost:8080/cadastro', { usuario })
-      .then(response => {
-        alert("Cadastro confirmado!");
-      })
-      .catch(error => {
-        alert("Ocorreu um erro ao tentar cadastrar você.")
-      });
+  function enviarDados(event) {
+    event.preventDefault();
+    
+    if (nome == "" || sobrenome == "" || email == "" || tel == "" || senha == "") {
+      alert("Preencha todos os campos!")
+    } else {
+      const butao = document.getElementById("butao");
+      butao.innerHTML = "Enviando..."
+
+      const usuario = new Usuario(nome, sobrenome, email, tel, senha);
+    
+      axios.post('http://localhost:8080/cadastro', { usuario })
+        .then(response => {
+          alert("Cadastro realizado com sucesso!")
+          navigate('/dashboard')
+        })
+        .catch(error => {
+          alert("Ocorreu um erro ao tentar cadastrar você.")
+        });
+    }
+
   }
 
   return (
     <div className="cadastroPage">
+
       <main>
         <div className="cadernos">
         </div>
@@ -70,7 +84,9 @@ function Cadastro() {
               <label htmlFor="concordo">Concordo com o envio dos meus dados.</label>
             </p>
 
-            <button onClick={enviarDados} type="submit">Enviar</button>
+            <button id="butao" onClick={enviarDados} type="submit">
+              Enviar
+            </button>
           </form>
 
           <hr />

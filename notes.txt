@@ -1,0 +1,24 @@
+<div className="carregamento">
+<div className="spinner-border text-warning" role="status">
+  <span className="sr-only">Loading...</span>
+</div>
+</div>
+
+.cadastroPage .carregamento {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastroPage .carregamento .spinner-border {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-width: 8px;
+}
